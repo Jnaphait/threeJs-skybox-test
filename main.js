@@ -1,5 +1,11 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import left from "./Skybox/left.png";
+import right from "./Skybox/right.png";
+import up from "./Skybox/up.png";
+import down from "./Skybox/down.png";
+import front from "./Skybox/front.png";
+import back from "./Skybox/back.png";
 
 const canvas = document.getElementById("canvas");
 // scene
@@ -24,12 +30,12 @@ renderer.setPixelRatio(window.devicePixelRatio);
 // envimage
 
 const urls = [
-  "./Skybox/left.png",
-  "./Skybox/right.png", 
-  "./Skybox/up.png",
-  "./Skybox/down.png",
-  "./Skybox/front.png",
-  "./Skybox/back.png"
+  left,
+  right, 
+  up,
+  down,
+  front,
+  back
 ];
 
 const loader = new THREE.CubeTextureLoader();
