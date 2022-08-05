@@ -23,15 +23,17 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 // envimage
 
+const urls = [
+  "./Skybox/left.png",
+  "./Skybox/right.png", 
+  "./Skybox/up.png",
+  "./Skybox/down.png",
+  "./Skybox/front.png",
+  "./Skybox/back.png"
+];
+
 const loader = new THREE.CubeTextureLoader();
-scene.background = loader.setPath("Skybox/").load([
-  "left.png",
-  "right.png", 
-  "up.png",
-  "down.png",
-  "front.png",
-  "back.png"
-]);
+scene.background = loader.load(urls);
 
 // controls
 const controls = new OrbitControls(camera, canvas);
